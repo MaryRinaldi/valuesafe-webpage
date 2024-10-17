@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
-    "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@mapbox/mapbox-gl-geocoder": "^5.0.2",
     "@mapbox/mapbox-sdk": "^0.15.5",
     "axios": "^1.7.2",
