@@ -1,10 +1,9 @@
-#ValueSafe
+# VALUESAFE
 
 <!-- ### Dependencies
 
 - Run `npm install` in project directory. This will install server-related dependencies such as `express`.
 - `cd client` and run `npm install`. This will install client dependencies (React).
-
 
 ### Database Prep
 
@@ -32,7 +31,6 @@
 - Run `npm install` in project directory. This will install server-related dependencies such as `express`.
 - `cd client` and run `npm install`. This will install client dependencies (React).
 
-
 ### Database Prep
 
 - Access the MySQL interface in your terminal by running `mysql -u root -p`
@@ -42,7 +40,7 @@
 ```bash
   DB_HOST=localhost
   DB_USER=root
-  DB_NAME=intelligeart_db
+  DB_NAME=valuesafe_db
   DB_PASS=YOURPASSWORD
 ```
 
@@ -53,12 +51,11 @@
 ### Development
 
 - Run `npm start` in project directory to start the Express server on port 3000
-- In another terminal, do `cd client`, `npm install` and run `npm run dev` to start the client in development mode with hot reloading in port 5173.
+- In another terminal, do `cd client` and run `npm run dev` to start the client in development mode with hot reloading in port 5173.
 
 ### Mapbox  installation
 npm install mapbox-gl
 npm install @mapbox/mapbox-gl-geocoder
-
 
 ### Email feature installation:
 npm install --save @emailjs/browser
@@ -66,11 +63,10 @@ npm install --save @emailjs/browser
 ### React swiper installation:
 npm install swiper
 
-
 ## Technologies Used
 
 * [React](https://reactjs.org/)
-* MAP
+* [Mapbox] (https://docs.mapbox.com/)
 * [Express]
 * [Node.js]
 * [Emailjs] -->
