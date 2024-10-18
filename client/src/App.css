@@ -73,9 +73,13 @@ p {
   position: fixed;
   top: -3%;
   width: 99.99%;
-  height: 6.5rem;
+  height: 7rem; 
   z-index: 1000;
   background: var(--color-background-light);
+  text-align: center;
+  padding: 1%;
+  font-size: 1em;
+  justify-content:space-around;
 }
 
 .navbar-container.dark-mode {
@@ -571,7 +575,7 @@ input:checked + .toggleLabel::after {
   padding: 1%;
   left: 0;
   font-size: 1em;
-  width: auto;
+  width: 99.99%;
   height: 7rem; 
   z-index: -1000;
   display: flex;

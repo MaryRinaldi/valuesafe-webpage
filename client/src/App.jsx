@@ -29,7 +29,7 @@ function App() {
   
   return (
     <>  
-      <div className={`${darkMode ? 'dark-mode' : ''}`}>
+      <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
       <NavBar darkMode={darkMode} />
       <Routes>
           <Route path="/" element={<FrontPage/>} />
