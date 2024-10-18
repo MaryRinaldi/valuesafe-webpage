@@ -29,7 +29,7 @@ function App() {
   
   return (
     <>  
-      <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
+      <div className={`${darkMode ? 'dark-mode' : ''}`}>
       <NavBar darkMode={darkMode} />
       <Routes>
           <Route path="/" element={<FrontPage/>} />
@@ -48,7 +48,7 @@ function App() {
           aria-label={darkMode ? 'Turn on light mode' : 'Turn on dark mode'}
         />
 <label className='toggleLabel' htmlFor="darkModeSwitch">
-  {darkMode ? 'Light mode' : 'Dark mode'}
+  {darkMode ? 'Dark mode' : 'Light mode'}
 </label>
       </div>
       <footer className="footer" >

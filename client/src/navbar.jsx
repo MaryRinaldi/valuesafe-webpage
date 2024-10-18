@@ -47,8 +47,8 @@ function NavBar({ darkMode }) {
   // Se siamo su "/" o "/FrontPage", mostra una navbar specifica
   if (location.pathname === '/' || location.pathname === '/FrontPage') {
     return (
-      <nav className="navbar">
-        <div className="navbar-container">
+      <nav>
+        <div className={`navbar-container  ${darkMode ? 'dark-mode' : ''}`}>
           <img src={Logo} alt="Intelligearth Logo" className="logo" />
 
           {/* Register finto, reindirizza alla dashboard */}
@@ -83,8 +83,8 @@ function NavBar({ darkMode }) {
 
   // Altrimenti, mostra la navbar per le altre routes
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
+    <nav>
+      <div className={`navbar-container  ${darkMode ? 'dark-mode' : ''}`}>
         <img src={Logo} alt="Intelligearth Logo" className="logo" />
 
         {/* Link alla dashboard */}
