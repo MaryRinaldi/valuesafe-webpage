@@ -98,9 +98,9 @@ function NavBar({ darkMode }) {
         </Link>
 
         {/* Link agli strumenti (ValueSafe) */}
-        <Link to="/tools" className={`navbar-link ${darkMode ? 'dark-mode' : ''}`}>
+        {/* <Link to="/tools" className={`navbar-link ${darkMode ? 'dark-mode' : ''}`}>
           {currentTranslation.tools}
-        </Link>
+        </Link> */}
       </div>
 
       {/* Modal per Feedback */}

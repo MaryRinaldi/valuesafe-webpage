@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import './components/pages/Modal.jsx'
-import Tools from './components/views/Tools.jsx';
+// import Tools from './components/views/Tools.jsx';
 import Feedback from './components/views/Feedback.jsx'
 import Funded from './assets/images/intelligearth_logo.png';
 import FrontPage from './components/views/FrontPage.jsx';
@@ -35,7 +35,7 @@ function App() {
           <Route path="/" element={<FrontPage/>} />
           <Route path="/dashboard" element={<DashBoard/>} />         
           <Route path="/feedback" element={<Feedback/>} />
-          <Route path="/tools" element={<Tools/>} /> 
+          {/* <Route path="/tools" element={<Tools/>} />  */}
           </Routes>
     </div>
     <div className="toggle-container">

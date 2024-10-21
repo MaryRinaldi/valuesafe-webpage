@@ -189,6 +189,7 @@ input:checked + .toggleLabel {
       width: 50%;
       margin-left: auto;
       margin-top: 0.3%;
+      justify-self: center;
     }
     
     ::-webkit-scrollbar {

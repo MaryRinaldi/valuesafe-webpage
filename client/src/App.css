@@ -1,3 +1,64 @@
+.vertical-menu {
+  border: 1px solid lightgray;
+  padding: 10px;
+  width: 200px; /* Larghezza del menu */
+  background-color: white; /* Colore di sfondo */
+}
+
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #0194f6aa; /* Colore di hover */
+}
+
+.menu-item.selected {
+  background-color: #00365a; /* Colore per l'opzione selezionata */
+  color: white; /* Colore del testo per l'opzione selezionata */
+}
+
+.opacity-slider {
+  width: 100%;
+  margin: 10px 0; /* Margine tra le opzioni e lo slider */
+}
+
+/* Design originale dello slider */
+.opacity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4caf50; /* Colore del thumb */
+  border-radius: 50%; /* Forma rotonda del thumb */
+  cursor: pointer;
+}
+
+.opacity-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4caf50; /* Colore del thumb */
+  border-radius: 50%; /* Forma rotonda del thumb */
+  cursor: pointer;
+}
+
+.opacity-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: #ddd; /* Colore di sfondo del track */
+  border-radius: 5px; /* Arrotonda gli angoli del track */
+}
+
+.opacity-slider::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: #ddd; /* Colore di sfondo del track */
+  border-radius: 5px; /* Arrotonda gli angoli del track */
+}
+
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -24,7 +85,7 @@ body::-webkit-scrollbar {
   width: 100%;
   margin-bottom: 1rem;
   margin-top: 3rem;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }
 
 
@@ -94,7 +155,7 @@ p {
   height: 100px; 
   width: auto;
   margin-right: auto;
-  margin-left: 15%; 
+  /* margin-left: 15%;  */
   justify-self: left;
 }
 
@@ -273,7 +334,7 @@ p {
 .funded_logo {
   height: auto; 
   width: auto;
-  margin-left: 5%;
+  /* margin-left: 5%; */
 }
 
 .cc_logo {
@@ -382,7 +443,7 @@ button {
 
 .map-container {
   width: 100%;
-  margin: 2rem auto 0;
+  /* margin: 2rem auto 0; */
   height: 400px;
   display: flex;
   justify-content: center;
@@ -458,7 +519,7 @@ button:hover {
 
 
 .modal-content h3, .modal-content label {
-  color: #00365a;
+  color: var(--color--dark);
   font-weight: 600;
   margin-left: 0;
   margin-bottom: 5%;
