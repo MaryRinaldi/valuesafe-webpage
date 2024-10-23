@@ -1,62 +1,3 @@
-.vertical-menu {
-  border: 1px solid lightgray;
-  padding: 10px;
-  width: 200px; /* Larghezza del menu */
-  background-color: white; /* Colore di sfondo */
-}
-
-.menu-item {
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.menu-item:hover {
-  background-color: #0194f6aa; /* Colore di hover */
-}
-
-.menu-item.selected {
-  background-color: #00365a; /* Colore per l'opzione selezionata */
-  color: white; /* Colore del testo per l'opzione selezionata */
-}
-
-.opacity-slider {
-  width: 100%;
-  margin: 10px 0; /* Margine tra le opzioni e lo slider */
-}
-
-/* Design originale dello slider */
-.opacity-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #4caf50; /* Colore del thumb */
-  border-radius: 50%; /* Forma rotonda del thumb */
-  cursor: pointer;
-}
-
-.opacity-slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: #4caf50; /* Colore del thumb */
-  border-radius: 50%; /* Forma rotonda del thumb */
-  cursor: pointer;
-}
-
-.opacity-slider::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 8px;
-  background: #ddd; /* Colore di sfondo del track */
-  border-radius: 5px; /* Arrotonda gli angoli del track */
-}
-
-.opacity-slider::-moz-range-track {
-  width: 100%;
-  height: 8px;
-  background: #ddd; /* Colore di sfondo del track */
-  border-radius: 5px; /* Arrotonda gli angoli del track */
-}
 
 
 body {
@@ -68,9 +9,14 @@ body {
   --color-secondary: #c64e4e; 
   --color-text: #333333; 
   --color-background-white: #f2f2f2; 
-  --color-background-light: #dcdcdc;
+  --color-background-light: #edece8;
   --color-background-dark: #2d1111; 
   --color--dark: #00365a;
+}
+
+#Root, .App {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 
@@ -84,8 +30,9 @@ body::-webkit-scrollbar {
 .Dashboard {
   width: 100%;
   margin-bottom: 1rem;
-  margin-top: 3rem;
-  /* margin-left: 1rem; */
+  margin-top: 7rem;
+  margin-left: 0.5%; 
+  margin-right: 0.5%;
 }
 
 
@@ -132,13 +79,12 @@ p {
   left: 0;
   align-items: center;
   position: fixed;
-  top: -3%;
+  top: -2%;
   width: 99.99%;
-  height: 7rem; 
+  height: 7.5rem; 
   z-index: 1000;
   background: var(--color-background-light);
   text-align: center;
-  padding: 1%;
   font-size: 1em;
   justify-content:space-around;
 }
@@ -150,13 +96,33 @@ p {
   border-width: thin;
 }
 
+.navbar-small {
+  height: 3.5rem; /* Imposta l'altezza dimezzata */
+  transition: height 0.3s ease; /* Aggiunge una transizione fluida */
+}
+.navbar-container.navbar-small .logo {
+  height: 80%;
+  padding: 0.5% 0 0 0.5%;
+  margin-top: 0;
+}
+
+.navbar-container.navbar-small .navbar-link{
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 12px;
+  padding: 0.1em 0.8em 0.4em 0.8em;
+  margin: 1% 1% 1% 0%;
+}
+
 
 .logo {
   height: 100px; 
   width: auto;
   margin-right: auto;
-  /* margin-left: 15%;  */
+  margin-left: 10%;
   justify-self: left;
+  margin-top: 1%;
+  padding: 1%;
 }
 
 .title {
@@ -375,11 +341,11 @@ p {
 
 .navbar-link {
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   text-decoration: underline;
   font-size: 16px;
   padding: 0.1em 0.8em 0.4em 0.8em;
-  margin: 1% 0% 1% 0%;
+  margin: 1% 1% 1% 0%;
 }
 
 .link:hover, a:hover {
@@ -388,7 +354,7 @@ p {
   text-decoration: none;
 }
 
-.navbar-link:hover {
+.navbar-link:hover, .navbar-container.navbar-small .navbar-link:hover {
   color: var(--color-tertiary);
   border-color: var(--color-secondary);
   text-decoration: none;
@@ -441,18 +407,150 @@ button {
   background-color: var(--color-background-light);
 }
 
-.map-container {
-  width: 100%;
-  /* margin: 2rem auto 0; */
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/* map dashboard selectors*/
+
+.horizontal-menu {
+  border: 1px solid lightgray;
+  padding: 1%;
+  width: auto; /* Larghezza al 100% */
+  background-color: white;
+  display: flex; /* Per renderlo orizzontale */
+  justify-content: space-evenly; /* Distribuisce gli elementi */
+  align-items: center; /* Centra verticalmente gli elementi */
 }
+
+.menu-item {
+  padding: 0.5%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 15px; /* Spaziatura tra le opzioni */
+}
+
+.menu-item:hover {
+  background-color: #0194f6aa;
+}
+
+.menu-item.selected {
+  background-color: #00365a;
+  color: white;
+}
+
+.opacity-slider {
+  width: 100px; /* Imposta la larghezza degli slider */
+  margin: 2px;
+}
+
+/* Container per mappa e immagine */
+.map-image-container {
+  display: flex;
+  width: auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 900px; /* Altezza desiderata per mappa e immagine */
+}
+
+.image-container {
+  width: 50%;
+  height: 100%;
+  margin: 0.5%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.rischio-box,
+.scala-box {
+  background-color: var(--color-background-light);
+  border: 1px solid #000;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.rischio-opzione,
+.scala-opzione {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.rischio-opzione:hover,
+.scala-opzione:hover {
+  background-color: var(--color-background-white);
+}
+
+.selected {
+  background-color: var(--color-secondary); /* Colore rosso per l'opzione selezionata */
+  color: white;
+}
+
+.comparto-message {
+  background-color: var(--color-primary); /* Colore di sfondo chiaro */
+  color: var(--color-text); /* Colore del testo */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #000000; /* Bordo leggermente più scuro */
+  border-radius: 4px; /* Angoli arrotondati */
+}
+
+
+/* Design originale dello slider */
+.opacity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4caf50; /* Colore del thumb */
+  border-radius: 50%; /* Forma rotonda del thumb */
+  cursor: pointer;
+}
+
+.opacity-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4caf50; /* Colore del thumb */
+  border-radius: 50%; /* Forma rotonda del thumb */
+  cursor: pointer;
+}
+
+.opacity-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: #ddd; /* Colore di sfondo del track */
+  border-radius: 5px; /* Arrotonda gli angoli del track */
+}
+
+.opacity-slider::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: #ddd; /* Colore di sfondo del track */
+  border-radius: 5px; /* Arrotonda gli angoli del track */
+}
+
+.map-container {
+  position: relative; /* Rendi il contenitore della mappa relativo */
+}
+
+.basemap-selector {
+  position: absolute; /* Posizione assoluta rispetto al contenitore */
+  bottom: 2%; /* Distanza dall'alto */
+  right: 1%; /* Distanza da sinistra */
+  z-index: 2000; /* Assicurati che sia sopra altri elementi */
+}
+
+.map-container {
+  width: 50%;
+  height: 100%;
+  margin:0.5%;
+}
+
 
 #map-container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-left: 1%;
+  margin: 2%;
 }
 
 .modal-overlay {

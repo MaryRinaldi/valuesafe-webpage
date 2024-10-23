@@ -23,6 +23,15 @@ function NavBar({ darkMode }) {
     setShowModal(false);
   };
 
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar-container');
+    if (window.scrollY > 50) { // Cambia 50 a un valore che ti sembra appropriato
+      navbar.classList.add('navbar-small');
+    } else {
+      navbar.classList.remove('navbar-small');
+    }
+  });
+
   // Traduzioni simulate
   const translations = {
     en: {
@@ -102,6 +111,7 @@ function NavBar({ darkMode }) {
           {currentTranslation.tools}
         </Link> */}
       </div>
+      
 
       {/* Modal per Feedback */}
       {showModal && <Modal showModal={showModal} closeModal={closeModal} modalContent={<Feedback />} />}

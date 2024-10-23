@@ -221,8 +221,8 @@ input:checked + .toggleLabel {
 
   @media only screen and (min-width: 600px) {
     .App, .container, h4 {
-        max-height: 99%;
-        max-width: 99%;
+        max-height: 100%;
+        max-width: 100%;
     }  
     
   .modal-content {
