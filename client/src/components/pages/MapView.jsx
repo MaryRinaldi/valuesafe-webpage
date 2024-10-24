@@ -5,7 +5,7 @@ import proj4 from 'proj4';
 const MapView = ({  goBack }) => {
   return (
     <div>
-      <h3>ValueSafe Map</h3>
+
       {/* <button onClick={goBack}><span>&#9198;</span> Go Back to selector</button> */}
       <MapComponent   />
       <h6>

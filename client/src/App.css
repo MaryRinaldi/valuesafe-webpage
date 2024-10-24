@@ -407,19 +407,6 @@ button {
   background-color: var(--color-background-light);
 }
 
-
-/* map dashboard selectors*/
-
-.horizontal-menu {
-  border: 1px solid lightgray;
-  padding: 1%;
-  width: auto; /* Larghezza al 100% */
-  background-color: white;
-  display: flex; /* Per renderlo orizzontale */
-  justify-content: space-evenly; /* Distribuisce gli elementi */
-  align-items: center; /* Centra verticalmente gli elementi */
-}
-
 .menu-item {
   padding: 0.5%;
   cursor: pointer;
@@ -462,23 +449,66 @@ button {
 }
 
 
-.rischio-box,
+/* map dashboard selectors*/
+
+.horizontal-menu {
+  border: 1px solid lightgray;
+  padding: 1%;
+  min-height: 400px;
+  /* width: auto;  */
+  background-color: white;
+  display: flex; 
+  justify-content: space-evenly; 
+  /* align-items: center;  */
+}
+
+.rischio-boxA {
+  width: 40%;
+  background-color: var(--color-background-light);
+  padding: 1%;
+  border: 1px solid #000;
+}
+
+.boxA-opzione {
+  background-color: var(--color-background-light);
+  border: 1px solid #000;
+  padding: 3%;
+  margin: 1%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-height: 40%;
+}
+
+.rischio-boxB {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Due colonne di larghezza uguale */
+  grid-template-rows: repeat(2, 1fr); /* Due righe di altezza uguale */
+  gap: 1%; /* Spaziatura tra i quadranti */
+  background-color: var(--color-background-light);
+  padding: 1%;
+  border: 1px solid #000;
+}
+
+
 .scala-box {
   background-color: var(--color-background-light);
   border: 1px solid #000;
-  padding: 10px;
-  margin-bottom: 10px;
-}
+  padding: 2%;
+  margin: 1%;
+} 
 
 .rischio-opzione,
-.scala-opzione {
-  padding: 8px;
+.scala-opzione, .level-opzione {
+  padding: 2%;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .rischio-opzione:hover,
-.scala-opzione:hover {
+.scala-opzione:hover,
+.level-opzione:hover {
+  color: var(--color-text);
   background-color: var(--color-background-white);
 }
 
@@ -490,8 +520,17 @@ button {
 .comparto-message {
   background-color: var(--color-primary); /* Colore di sfondo chiaro */
   color: var(--color-text); /* Colore del testo */
-  padding: 10px;
-  margin: 10px 0;
+  padding: 3%;
+  margin: 2% 1%;
+  border: 1px solid #000000; /* Bordo leggermente più scuro */
+  border-radius: 4px; /* Angoli arrotondati */
+}
+
+.select-message {
+  background-color: var(--color-primary); /* Colore di sfondo chiaro */
+  color: var(--color-text); /* Colore del testo */
+  padding: 3%;
+  margin: 2% 1%;
   border: 1px solid #000000; /* Bordo leggermente più scuro */
   border-radius: 4px; /* Angoli arrotondati */
 }
